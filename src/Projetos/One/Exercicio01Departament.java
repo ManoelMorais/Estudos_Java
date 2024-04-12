@@ -1,4 +1,4 @@
-package Projetos;
+package Projetos.One;
 
 public class Exercicio01Departament {
 

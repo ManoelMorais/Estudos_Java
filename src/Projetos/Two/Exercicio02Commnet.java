@@ -1,4 +1,4 @@
-package Projetos;
+package Projetos.Two;
 
 public class Exercicio02Commnet {
     private String text;

@@ -1,4 +1,4 @@
-package Projetos;
+package Projetos.Three;
 
 public class fixacao01Product {
 

@@ -1,4 +1,4 @@
-package Projetos;
+package Projetos.One;
 
 public enum Exercicio01WorkLevel {
     JUNIOR,
