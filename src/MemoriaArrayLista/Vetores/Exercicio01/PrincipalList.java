@@ -31,7 +31,7 @@ public class PrincipalList {
             String name = sc.nextLine();
             System.out.print("Salary: ");
             double salary = sc.nextDouble();
-            list.add(new Entitie(id, name, salary));
+//            list.add(new Entitie(id, name, salary));
         }
 
         // PART 2 - UPDATING SALARY OF GIVEN EMPLOYEE:
