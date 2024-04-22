@@ -9,6 +9,7 @@ import static java.time.LocalDate.parse;
 
 public class DataAndHora {
     public static void main(String[] args){
+
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
@@ -83,5 +84,4 @@ public class DataAndHora {
 
         System.out.println("t1 dias = " + t1.toDays());
     }
-
 }
