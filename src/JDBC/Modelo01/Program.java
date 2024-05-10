@@ -1,4 +1,4 @@
-package JDBC;
+package JDBC.Modelo01;
 
 import java.io.IOException;
 import java.sql.Connection;

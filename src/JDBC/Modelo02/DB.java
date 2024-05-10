@@ -1,10 +1,8 @@
-package JDBC;
+package JDBC.Modelo02;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 public class DB {
@@ -35,12 +33,32 @@ public class DB {
     }
 
     private static Properties loadProperties() throws IOException {
-        try(FileInputStream fs = new FileInputStream("db.properies")) {
+        try(FileInputStream fs = new FileInputStream("db.properties")) {
             Properties prop = new Properties();
             prop.load(fs);
             return prop;
         } catch (IOException e) {
             throw new MyJDBC(e.getMessage());
+        }
+    }
+
+    public static void closeStatment(Statement st) {
+        if (st != null) {
+            try {
+                st.close();
+            } catch (SQLException e) {
+                throw new MyJDBC(e.getMessage());
+            }
+        }
+    }
+
+    public static void closeResult(ResultSet rs) {
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                throw new MyJDBC(e.getMessage());
+            }
         }
     }
 }
