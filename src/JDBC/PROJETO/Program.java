@@ -1,15 +1,14 @@
 package JDBC.PROJETO;
 
+import java.io.IOException;
 import java.util.Date;
 
 public class Program {
-    public static void main(String[] args) {
-        Department dp = new Department(1, "Books");
-        Seller seller = new Seller(21, "boby", "boby@gmail.com", new Date(), 3000.0, dp);
-
+    public static void main(String[] args) throws IOException {
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
-        //System.out.println(dp);
+        Seller seller = sellerDao.findById(3);
+
         System.out.println(seller);
     }
 }
