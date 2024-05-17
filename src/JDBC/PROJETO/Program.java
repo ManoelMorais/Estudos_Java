@@ -3,9 +3,12 @@ package JDBC.PROJETO;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
         System.out.println("=== Test 1: seller findbyid ===");
@@ -35,6 +38,12 @@ public class Program {
         seller.setNome("Marta Waine");
         sellerDao.update(seller);
         System.out.println("Updated! completed");
+
+        System.out.println("\n=== Test 6: seller delete ===");
+        System.out.println("Enter id for delete test: ");
+        int id = sc.nextInt();
+        sellerDao.deleteById(id);
+        System.out.println("Delete! completed");
 
     }
 }
